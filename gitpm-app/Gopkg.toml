@@ -22,9 +22,9 @@
 
 
 [[constraint]]
-  name = "github.com/revel/modules"
-  version = "0.17.0"
+  name = "github.com/astaxie/beego"
+  version = "1.9.0"
 
 [[constraint]]
-  name = "github.com/revel/revel"
-  version = "0.17.1"
+  name = "github.com/smartystreets/goconvey"
+  version = "1.6.3"

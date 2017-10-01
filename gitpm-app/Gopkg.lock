@@ -2,74 +2,38 @@
 
 
 [[projects]]
-  name = "github.com/agtorre/gocolorize"
-  packages = ["."]
-  revision = "f42b554bf7f006936130c9bb4f971afd2d87f671"
-  version = "v1.0.0"
-
-[[projects]]
-  name = "github.com/klauspost/compress"
-  packages = ["flate","gzip","zlib"]
-  revision = "6c8db69c4b49dd4df1fff66996cf556176d0b9bf"
-  version = "v1.2.1"
-
-[[projects]]
-  name = "github.com/klauspost/cpuid"
-  packages = ["."]
-  revision = "ae7887de9fa5d2db4eaa8174a7eff2c1ac00f2da"
-  version = "v1.1"
-
-[[projects]]
-  name = "github.com/klauspost/crc32"
-  packages = ["."]
-  revision = "cb6bfca970f6908083f26f39a79009d608efd5cd"
-  version = "v1.1"
-
-[[projects]]
-  name = "github.com/revel/config"
-  packages = ["."]
-  revision = "662332b741dd464a886ab0901379c02b9bc5dc30"
-  version = "v0.17"
-
-[[projects]]
-  name = "github.com/revel/modules"
-  packages = ["static/app/controllers","testrunner/app","testrunner/app/controllers"]
-  revision = "8c55c9a970cf5062eeb0368e809d6f27cffc28b0"
-  version = "v0.17"
+  name = "github.com/astaxie/beego"
+  packages = [".","config","context","context/param","grace","logs","session","toolbox","utils"]
+  revision = "d96289a81bf67728cff7a19b067aaecc65a62ec6"
+  version = "v1.9.0"
 
 [[projects]]
   branch = "master"
-  name = "github.com/revel/pathtree"
+  name = "github.com/gopherjs/gopherjs"
+  packages = ["js"]
+  revision = "415225646bb92c4449bb484646f2c95a98402f6f"
+
+[[projects]]
+  name = "github.com/jtolds/gls"
   packages = ["."]
-  revision = "41257a1839e945fce74afd070e02bab2ea2c776a"
+  revision = "77f18212c9c7edc9bd6a33d383a7b545ce62f064"
+  version = "v4.2.1"
 
 [[projects]]
-  name = "github.com/revel/revel"
-  packages = [".","testing"]
-  revision = "6c8d554fd50278abe4a1c8ad50b811728d5f2a49"
-  version = "v0.17.1"
+  name = "github.com/smartystreets/assertions"
+  packages = [".","internal/go-render/render","internal/oglematchers"]
+  revision = "ff1918e1e5a13a74014644ae7c1e0ba2f791364d"
+  version = "1.8.0"
 
 [[projects]]
-  branch = "master"
-  name = "golang.org/x/net"
-  packages = ["websocket"]
-  revision = "0a9397675ba34b2845f758fe3cd68828369c6517"
-
-[[projects]]
-  branch = "master"
-  name = "golang.org/x/sys"
-  packages = ["unix"]
-  revision = "314a259e304ff91bd6985da2a7149bbf91237993"
-
-[[projects]]
-  name = "gopkg.in/fsnotify.v1"
-  packages = ["."]
-  revision = "629574ca2a5df945712d3079857300b5e4da0236"
-  version = "v1.4.2"
+  name = "github.com/smartystreets/goconvey"
+  packages = ["convey","convey/gotest","convey/reporting"]
+  revision = "9e8dc3f972df6c8fcc0375ef492c24d0bb204857"
+  version = "1.6.3"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "9ccf888c786c32d01510704578fbeddc69b2e0f5f8ed9a47b3c1a3d3e6df30f4"
+  inputs-digest = "8cdfe9e73a65183a61d63afed2105339e4dfb25ded8afa3cbf744188ddb4e0e6"
   solver-name = "gps-cdcl"
   solver-version = 1
