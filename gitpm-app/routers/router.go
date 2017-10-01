@@ -8,4 +8,7 @@ import (
 func init() {
 	beego.Router("/", &controllers.MainController{})
 	beego.Router("/users", &controllers.UserController{})
+
+	// Asana Routes
+	beego.Router("/asana/webhook", &controllers.AsanaController{}, "post:RecieveWebook")
 }
