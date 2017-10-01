@@ -24,16 +24,14 @@ services:
       - RABBITMQ_USERNAME=${RABBIT_USERNAME}
       - RABBITMQ_PASSWORD=${RABBIT_PASSWORD}
     restart: always
-  gitpm-app:
-    image: 'golang'
-    container_name: gitpm-internal-gitpm
-    env_file: .env
-    volumes:
-      - "./gitpm-app:/go"
-    ports:
-      - "9000:9000"
-    entry_point:
-      - "revel run github.com/gitpmio/gitpm/gitpm-app"
+  # gitpm-app:
+  #   build: .
+  #   container_name: gitpm-internal-gitpm
+  #   env_file: .env
+  #   volumes:
+  #     - ".:/go/src/github.com/gitpmio/gitpm"
+  #   ports:
+  #     - "9000:9000"
 volumes:
   gitpm-postgres:
   gitpm-rabbit:
