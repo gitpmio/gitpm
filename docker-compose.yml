@@ -1,0 +1,29 @@
+version: '3'
+services:
+  postgres:
+    image: 'bitnami/postgresql:9.6'
+    container_name: gitpm-internal-postgres
+    volumes:
+      - gitpm-postgres:/bitnami
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRESQL_PASSWORD=${DB_PASSWORD}
+      - POSTGRESQL_USERNAME=${DB_USER}
+      - POSTGRESQL_DATABASE=${DB_NAME}
+    restart: always
+  rabbit:
+    image: 'bitnami/rabbitmq:latest'
+    container_name: gitpm-internal-rabbit
+    volumes:
+      - gitpm-rabbit:/bitnami
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    environment:
+      - RABBITMQ_USERNAME=${RABBIT_USERNAME}
+      - RABBITMQ_PASSWORD=${RABBIT_PASSWORD}
+    restart: always
+volumes:
+  gitpm-postgres:
+  gitpm-rabbit:
