@@ -4,3 +4,5 @@
 
 # Golang Files/Directories
 vendor/
+data.db
+gitpm-app

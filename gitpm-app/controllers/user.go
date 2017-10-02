@@ -1,43 +1,45 @@
 package controllers
 
 import (
+	"encoding/json"
+
 	"github.com/astaxie/beego"
+	"github.com/gitpmio/gitpm/gitpm-app/models"
 )
 
 type UserController struct {
 	beego.Controller
 }
 
-type User struct {
-	Username string `json:"username"`
-	Name     string `json:"name"`
-}
-
-func (u *User) Save() bool {
-	return true
+type Response struct {
+	InsertedId int64  `json:"inserted_id"`
+	Error      string `json:"error"`
 }
 
 func (c *UserController) Get() {
-	u := User{
-		Username: "rachit",
-		Name:     "Rachit",
+	u := models.User{Id: 1}
+	user := u.Get()
+	c.Data["json"] = map[string]string{
+		"username": user.Username,
 	}
-	c.Data["json"] = &u
 	c.ServeJSON()
 }
 
 func (c *UserController) Post() {
-	username := c.GetString("username")
-	name := c.GetString("name")
+	u := models.User{}
+	err := json.Unmarshal(c.Ctx.Input.RequestBody, &u)
 
-	u := User{
-		Username: username,
-		Name:     name,
+	id, err := u.Save()
+
+	if err != nil {
+		c.Data["json"] = Response{
+			Error: err.Error(),
+		}
+	} else {
+		c.Data["json"] = Response{
+			InsertedId: id,
+		}
 	}
-
-	saved := u.Save()
-
-	c.Data["json"] = map[string]bool{"success": saved}
 	c.ServeJSON()
 
 }
