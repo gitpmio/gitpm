@@ -5,8 +5,6 @@ services:
     container_name: gitpm-internal-postgres
     volumes:
       - gitpm-postgres:/bitnami
-    ports:
-      - "5432:5431"
     environment:
       - POSTGRESQL_PASSWORD=${DB_PASSWORD}
       - POSTGRESQL_USERNAME=${DB_USER}
