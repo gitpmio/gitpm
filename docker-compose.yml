@@ -24,14 +24,14 @@ services:
       - RABBITMQ_USERNAME=${RABBIT_USERNAME}
       - RABBITMQ_PASSWORD=${RABBIT_PASSWORD}
     restart: always
-  # gitpm-app:
-  #   build: .
-  #   container_name: gitpm-internal-gitpm
-  #   env_file: .env
-  #   volumes:
-  #     - ".:/go/src/github.com/gitpmio/gitpm"
-  #   ports:
-  #     - "9000:9000"
+  gitpm-app:
+    build: .
+    container_name: gitpm-internal-gitpm
+    env_file: .env
+    volumes:
+      - "./gitpm-app:/go/src/github.com/gitpmio/gitpm/gitpm-app"
+    ports:
+      - "8080:8080"
 volumes:
   gitpm-postgres:
   gitpm-rabbit:
