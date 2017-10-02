@@ -13,10 +13,11 @@ func init() {
 	orm.RegisterDriver("postgres", orm.DRPostgres)
 
 	postgresConnectionString := fmt.Sprintf(
-		"postgresql://%s:%s@%s/%s",
+		"postgresql://%s:%s@%s:%s/%s?sslmode=disable",
 		beego.AppConfig.String("dbuser"),
 		beego.AppConfig.String("dbpassword"),
 		beego.AppConfig.String("dbhost"),
+		beego.AppConfig.String("dbport"),
 		beego.AppConfig.String("dbname"),
 	)
 
