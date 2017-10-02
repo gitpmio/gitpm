@@ -22,4 +22,3 @@ services:
       - "8080:8080"
 volumes:
   gitpm-postgres:
-  gitpm-rabbit:
