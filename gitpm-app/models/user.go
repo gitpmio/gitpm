@@ -1,10 +1,7 @@
 package models
 
 import (
-	"fmt"
-
 	"github.com/astaxie/beego/orm"
-	_ "github.com/mattn/go-sqlite3" // import your required driver
 )
 
 type User struct {
@@ -19,8 +16,6 @@ func init() {
 
 func (u *User) Save() (id int64, err error) {
 	o := orm.NewOrm()
-	fmt.Println("user")
-	fmt.Println(*u)
 	insertedId, err := o.Insert(u)
 
 	if err != nil {

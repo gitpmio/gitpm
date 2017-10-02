@@ -6,6 +6,7 @@ import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	_ "github.com/gitpmio/gitpm/gitpm-app/routers"
+	_ "github.com/mattn/go-sqlite3" // import your required driver
 )
 
 func init() {
@@ -16,7 +17,7 @@ func init() {
 func main() {
 	err := orm.RunSyncdb("default", true, true)
 	if err != nil {
-		fmt.Errorf(err)
+		fmt.Println(err)
 	}
 	beego.Run()
 }
