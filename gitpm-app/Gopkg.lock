@@ -3,7 +3,7 @@
 
 [[projects]]
   name = "github.com/astaxie/beego"
-  packages = [".","config","context","context/param","grace","logs","session","toolbox","utils"]
+  packages = [".","config","context","context/param","grace","logs","orm","session","toolbox","utils"]
   revision = "d96289a81bf67728cff7a19b067aaecc65a62ec6"
   version = "v1.9.0"
 
@@ -20,6 +20,12 @@
   version = "v4.2.1"
 
 [[projects]]
+  name = "github.com/mattn/go-sqlite3"
+  packages = ["."]
+  revision = "ca5e3819723d8eeaf170ad510e7da1d6d2e94a08"
+  version = "v1.2.0"
+
+[[projects]]
   name = "github.com/smartystreets/assertions"
   packages = [".","internal/go-render/render","internal/oglematchers"]
   revision = "ff1918e1e5a13a74014644ae7c1e0ba2f791364d"
@@ -31,9 +37,15 @@
   revision = "9e8dc3f972df6c8fcc0375ef492c24d0bb204857"
   version = "1.6.3"
 
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/net"
+  packages = ["context"]
+  revision = "0a9397675ba34b2845f758fe3cd68828369c6517"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "8cdfe9e73a65183a61d63afed2105339e4dfb25ded8afa3cbf744188ddb4e0e6"
+  inputs-digest = "ac2c3a01ad81d1d1e575d06d331ea417be911f6b4b26e27d54f04ea380281098"
   solver-name = "gps-cdcl"
   solver-version = 1
