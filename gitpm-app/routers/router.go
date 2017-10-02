@@ -11,4 +11,7 @@ func init() {
 
 	// Asana Routes
 	beego.Router("/asana/webhook", &controllers.AsanaController{}, "post:RecieveWebook")
+
+	// example github Routes
+	beego.Router("/github/:username", &controllers.GithubController{})
 }
