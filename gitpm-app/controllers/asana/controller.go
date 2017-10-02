@@ -1,4 +1,4 @@
-package controllers
+package asana
 
 import (
 	"github.com/astaxie/beego"

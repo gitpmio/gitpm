@@ -36,3 +36,7 @@
 [[constraint]]
   branch = "master"
   name = "github.com/google/go-github"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/lib/pq"
